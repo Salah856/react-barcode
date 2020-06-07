@@ -63,11 +63,11 @@ export default class Barcode extends React.Component<Props> {
   render() {
     const { renderAs } = this.props;
     if (renderAs === 'canvas') {
-      return <svg ref={this.inputRef} />;
-    } else if (renderAs === 'canvas') {
       return <canvas ref={this.inputRef} />;
-    } else {
+    } else if (renderAs === 'img') {
       return <img ref={this.inputRef} />;
+    } else {
+      return <svg ref={this.inputRef} />;
     }
   }
 }
